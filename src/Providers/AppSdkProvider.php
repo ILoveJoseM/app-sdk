@@ -15,8 +15,6 @@ use JoseChan\App\Sdk\AppSdk;
 
 class AppSdkProvider extends ServiceProvider
 {
-    protected $defer = true;
-
     public function __construct(\Illuminate\Contracts\Foundation\Application $app)
     {
         parent::__construct($app);
