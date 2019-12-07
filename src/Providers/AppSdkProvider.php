@@ -22,7 +22,7 @@ class AppSdkProvider extends ServiceProvider
 
     public function boot()
     {
-        $this->publishes([__DIR__.'/../../config/app.php' => config_path("app_sdk.php")]);
+        $this->publishes([__DIR__.'/../../config/app.php' => config_path("sdk.php")], "sdk");
     }
 
     /**
@@ -33,7 +33,7 @@ class AppSdkProvider extends ServiceProvider
     public function register()
     {
 
-        $config = config("app_sdk");
+        $config = config("sdk.app");
 
         if(!$config){
             $config = include __DIR__.'/../../config/app.php';
