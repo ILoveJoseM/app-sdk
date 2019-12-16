@@ -1,9 +1,7 @@
 <?php
 
 return [
-    "app" => [
-        "scheme" => "http",
-        "host" => "127.0.0.1",
-        "port" => "8001"
-    ]
+    "scheme" => "http",
+    "host" => "127.0.0.1",
+    "port" => "8001"
 ];

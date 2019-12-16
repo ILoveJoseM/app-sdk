@@ -15,14 +15,9 @@ use JoseChan\App\Sdk\AppSdk;
 
 class AppSdkProvider extends ServiceProvider
 {
-    public function __construct(\Illuminate\Contracts\Foundation\Application $app)
-    {
-        parent::__construct($app);
-    }
-
     public function boot()
     {
-        $this->publishes([__DIR__.'/../../config/app.php' => config_path("sdk.php")], "sdk");
+
     }
 
     /**
@@ -33,7 +28,7 @@ class AppSdkProvider extends ServiceProvider
     public function register()
     {
 
-        $config = config("sdk.app");
+        $config = config("sdk");
 
         if(!$config){
             $config = include __DIR__.'/../../config/app.php';
