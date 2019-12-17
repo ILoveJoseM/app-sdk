@@ -12,7 +12,7 @@ namespace JoseChan\App\Sdk;
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Uri;
 use JoseChan\Base\Sdk\BaseSdk;
-use JoseChan\Base\Sdk\Signature\SignAdaptor;
+use JoseChan\Signature\SignAdaptor;
 
 /**
  * 应用Sdk
@@ -81,7 +81,7 @@ class AppSdk extends BaseSdk
 
         $data = [
             "app_id" => $app_id,
-            "parameter_string" => $parameter_string,
+            "parameter_string" => urlencode($parameter_string),
             "sign" => $sign,
             "sign_type" => $sign_type,
         ];
